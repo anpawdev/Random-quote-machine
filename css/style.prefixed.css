@@ -16,6 +16,15 @@ main {
 main .box {
   width: 400px;
   height: 400px;
+  text-align: center;
+}
+
+main .box .quote {
+  color: #fff;
+}
+
+main .box .author {
+  color: #fff;
 }
 
 main .trigger {
