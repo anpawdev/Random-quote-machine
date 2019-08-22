@@ -18,7 +18,7 @@ function getQuote() {
             return resp.json();
     })
     .then(createTweet);
-}
+};
 
 function createTweet(input) {
     var data = input[0];
