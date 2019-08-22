@@ -41,4 +41,8 @@ function createTweet(input) {
         document.querySelector('.author').innerText = "Author: " + quoteAuthor;
         document.querySelector('.tweet').setAttribute('href', tweet);
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 557a88df0d4f61d86f68b3567c9dfdfc0eeb09b8
