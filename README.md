@@ -1,7 +1,6 @@
 # Random-quote-machine
 
 Random quotes using API
-https://annapawlik.github.io/Random-quote-machine/
 
 ## Technology:
 * HTML5
