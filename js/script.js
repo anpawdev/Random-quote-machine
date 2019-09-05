@@ -3,7 +3,7 @@
 var prefix = "https://cors-anywhere.herokuapp.com/";
 
 var tweetLink = "https://twitter.com/intent/tweet?text=";
-var quoteUrl = "https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1";
+var quoteUrl = "http://api.icndb.com/jokes/random";
 
 document.addEventListener('DOMContentLoaded', function() {
     getQuote();
@@ -16,23 +16,17 @@ function getQuote() {
     fetch(prefix + quoteUrl, { cache: "no-store" })
         .then(function(resp) {
             return resp.json();
-    })
-    .then(createTweet);
+        })
+        .then(createTweet);
 };
 
 function createTweet(input) {
-    var data = input[0];
-
+    
     var dataElement = document.createElement('div');
-    dataElement.innerHTML = data.content;
+    dataElement.innerHTML = input.value.joke;
+
     var quoteText = dataElement.innerText.trim();
-    var quoteAuthor = data.title;
-
-    if (!quoteAuthor.length) {
-        quoteAuthor = "Unknown author";
-    }
-
-    var tweetText = "Quote of the day - " + quoteText + " Author: " + quoteAuthor;
+    var tweetText = "Quote of the day - " + quoteText;
     
     if (tweetText.length > 140) {
         getQuote();
@@ -43,3 +37,5 @@ function createTweet(input) {
         document.querySelector('.tweet').setAttribute('href', tweet);
     }
 };
+
+
