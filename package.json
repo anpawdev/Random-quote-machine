@@ -36,7 +36,7 @@
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "globstar": "^1.0.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.1",
     "onchange": "^6.0.0"
   },
   "dependencies": {
